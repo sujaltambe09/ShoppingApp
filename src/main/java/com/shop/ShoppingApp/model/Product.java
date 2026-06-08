@@ -1,7 +1,13 @@
 package com.shop.ShoppingApp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
+
+@Entity
 public class Product {
 
+    @Id
     private int prodId;
     private String prodName;
     private int prodPrice;
@@ -29,6 +35,9 @@ public class Product {
     public void setProdPrice(int prodPrice) {
         this.prodPrice = prodPrice;
     }
+
+    public Product() {}
+
 
     public Product(int prodId, String prodName, int prodPrice) {
         this.prodId = prodId;
